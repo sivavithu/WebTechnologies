@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>
+Embedded Javascript</title>
+</head>
+<body>
+<h1 id="heading">WEB</h1>
+<P id="demo">Original para</P>
+<button onclick="generateTable()">Generate table</button>
+<BUTTON onclick="this.innerHTML=Date()">the date is: </BUTTON>
+<br>
+<button onclick="displayDate()">Date</button>
+<script>
+/*document.writeln("First Line<br>");
+document.write("Second Line<br>");*/
+document.write("third line<br>");
+//window.alert("New page");
+/*confirm("New Page");
+prompt("Enter name:");*/
+//document.getElementById("demo").innerHTML="Hello World";
+
+/*var x=10;
+document.write(x+"<br>");
+x=15;
+document.writeln(x+"<br>");
+var y="hello";
+//document.write(y);
+let a=150;  //let variable cannot be redeclared
+document.write(a+"<br>");
+const t=10;//cant be reassigned or redeclared
+document.write(t+"<br>");
+const ob1={firstname:"web",lastname:"tech"};
+document.write(ob1.firstname+"<br>");
+const arr1=["php","java"];
+document.write(arr1[0]+"<br>");*/
+
+var x=10;
+var y=20;
+document.write(x+y+"<br>");
+document.write(x===y+"<br>");
+document.write(10<<3+"<br>");//shift binary
+document.write("<br>");
+console.log(x+y);
+
+var mark=10;
+var result=(mark>50)?"pass":"fail";
+document.write(result+"<BR>");
+const person={name:"john",age:30};
+
+document.write("name" in person);
+document.write("<BR>");
+
+var num=1;
+var day="";
+switch(num){
+
+case 1:day="monday";
+         break; 
+case 2:day="tuesday";break;
+case 3:day="wednesday";break;
+case 4:day="thursday";break;
+
+default:day="enter num";
+}
+document.write(day+"<BRE><BR>");
+
+var sumodd=0;
+var sumeven=0;
+
+for(var i=1;i<=100;i++)
+{
+    if(i%2==0)
+	   sumeven+=i;
+	else
+	   sumodd+=i;
+}
+document.write("sum of even="+sumeven+"<BR>");
+document.write("sum of odds="+sumodd+"<BR>");
+
+/*function print(name){
+document.write(name+"<BR>");
+}
+var name="web";
+print(name);*/
+
+function print(name){
+return name;
+}
+var name="web";
+document.write(print(name)+"<BR>");
+
+function area(length,width){
+return length*width;
+}
+var length=7;
+var width=3;
+
+document.write("Area of rectange is "+area(length,width)+"<BR>");
+
+/*function op(in1,in2)
+{
+document.write("addition = "+(in1+in2)+"<BR>");
+}
+
+var in1=parseInt(prompt("enter input 1"));
+var in2=parseInt(prompt("enter input 2"));
+
+op(in1,in2);*/
+
+var str1="alien";
+var str2="";
+
+for(var i=str1.length-1;i>=0;i--)
+{
+  str2+=str1.charAt(i);//str1[i] also works
+}
+document.write(str2);
+
+document.getElementById("demo").innerHTML="paragraph";
+document.getElementById("heading").style.color="red";
+
+/*function generateTable()
+{
+var body=document.getElementById("table");
+var tblBody=document.createElement("tbody");
+//create all cells
+ var row=document.createElement("tr");
+ 
+   for()
+}*/
+function displayDate()
+{
+  document.getElementById("demo").innerHTML=Date();
+}
+
+</script>
+</body>
+</html>
